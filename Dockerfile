@@ -15,4 +15,4 @@ EXPOSE 2222
 ENTRYPOINT ["/usr/bin/ssh", "-i", "/.keys/ssh_rsa_key", "-T", "-N", "-o", "StrictHostKeyChecking=false", "-o", "ServerAliveInterval=180", "-L"]
 
 # docker run --name keys -v /.keys busybox
-# docker run -it --rm --entrypoint="/key_init" --volumes-from keys testt
+# docker run -it --rm --entrypoint="/key_init" --volumes-from keys zwxajh/alpine:tunnel
